@@ -19,10 +19,10 @@ const sizes = getImgSizes({
   defaultWidth: '100vw',
   breakpoints: [
     {
-      minWidth: 960
+      minWidth: '960px'
     },
     {
-      minWidth: 480
+      minWidth: '480px'
     }
   ]
 })
@@ -47,10 +47,10 @@ const Image = ({ src, srcset, alt, width }) => {
     defaultWidth: width,
     breakpoints: [
       {
-        minWidth: 960
+        minWidth: '960px'
       },
       {
-        minWidth: 480
+        minWidth: '480px'
       }
     ]
   })
