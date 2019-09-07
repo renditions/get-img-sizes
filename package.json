@@ -4,7 +4,7 @@
   "description": "Generate string for HTML image sizes attribute.",
   "main": "src/index.js",
   "scripts": {
-    "test": "standard --global describe --global it --global expect && jest",
+    "test": "standard --global describe --global it --global expect --global beforeEach && jest",
     "tdd": "jest --watch"
   },
   "repository": {

@@ -41,24 +41,11 @@ The above code logs the following string to the console:
 
 ```jsx
 import React from 'react'
-import getImgSizes from '@renditions/get-img-sizes'
+import getSizes from '@renditions/get-img-sizes'
 
-const Image = ({ src, srcset, alt, width }) => {
-  const sizes = getImgSizes({
-    defaultImageWidth: width,
-    breakpoints: [
-      {
-        viewportMinWidth: '960px',
-        imageWidth: '50vw'
-      },
-      {
-        viewportMinWidth: '480px'
-      }
-    ]
-  })
+const Image = ({ width, ...rest }) => {
+  const sizes = getSizes({ defaultImageWidth: width })
 
-  return (
-    <img src={src} srcSet={srcset} sizes={sizes} alt={alt} />
-  )
+  return <img sizes={sizes} {...rest} />
 }
 ```
