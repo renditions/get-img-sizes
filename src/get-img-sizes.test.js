@@ -5,10 +5,10 @@ describe('get img sizes', () => {
     defaultWidth: '100vw',
     breakpoints: [
       {
-        minWidth: 960
+        minWidth: '960px'
       },
       {
-        minWidth: 480
+        minWidth: '480px'
       }
     ]
   }
