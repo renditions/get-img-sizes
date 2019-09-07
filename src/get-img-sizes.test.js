@@ -2,13 +2,14 @@ const getImgSizes = require('./get-img-sizes')
 
 describe('get img sizes', () => {
   const args = {
-    defaultWidth: '100vw',
+    defaultImageWidth: '100vw',
     breakpoints: [
       {
-        minWidth: '960px'
+        viewportMinWidth: '960px',
+        imageWidth: '50vw'
       },
       {
-        minWidth: '480px'
+        viewportMinWidth: '480px'
       }
     ]
   }
@@ -18,6 +19,6 @@ describe('get img sizes', () => {
   })
 
   it('should return the correct string', () => {
-    expect(getImgSizes(args)).toBe('(min-width: 960px) 100vw,(min-width: 480px) 100vw,100vw')
+    expect(getImgSizes(args)).toBe('(min-width: 960px) 50vw,(min-width: 480px) 100vw,100vw')
   })
 })

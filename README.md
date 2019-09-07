@@ -16,13 +16,14 @@ npm install @renditions/get-img-sizes
 import getImgSizes from '@renditions/get-img-sizes'
 
 const sizes = getImgSizes({
-  defaultWidth: '100vw',
+  defaultImageWidth: '100vw',
   breakpoints: [
     {
-      minWidth: '960px'
+      viewportMinWidth: '960px',
+      imageWidth: '50vw'
     },
     {
-      minWidth: '480px'
+      viewportMinWidth: '480px'
     }
   ]
 })
@@ -33,7 +34,7 @@ console.log(sizes)
 The above code logs the following string to the console:
 
 ```
-(min-width: 960px) 100vw,(min-width: 480px) 100vw,100vw
+(min-width: 960px) 50vw,(min-width: 480px) 100vw,100vw
 ```
 
 ### Using with React
@@ -44,13 +45,14 @@ import getImgSizes from '@renditions/get-img-sizes'
 
 const Image = ({ src, srcset, alt, width }) => {
   const sizes = getImgSizes({
-    defaultWidth: width,
+    defaultImageWidth: width,
     breakpoints: [
       {
-        minWidth: '960px'
+        viewportMinWidth: '960px',
+        imageWidth: '50vw'
       },
       {
-        minWidth: '480px'
+        viewportMinWidth: '480px'
       }
     ]
   })
