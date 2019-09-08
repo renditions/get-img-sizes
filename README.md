@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/@renditions/get-sizes.svg?style=flat-square)](https://www.npmjs.com/package/@renditions/get-sizes) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/feross/standard)
 
-Generate the sizes attribute for HTML [img](https://devdocs.io/html/element/img) and [picture](https://devdocs.io/html/element/picture) tags.
+Generate the sizes attribute for HTML [img](https://devdocs.io/html/element/img) and [picture](https://devdocs.io/html/element/source) tags.
 
 ## Install
 
