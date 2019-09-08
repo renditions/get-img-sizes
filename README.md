@@ -2,7 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/@renditions/get-sizes.svg?style=flat-square)](https://www.npmjs.com/package/@renditions/get-sizes) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/feross/standard)
 
-Generate string for HTML image [sizes attribute](https://devdocs.io/html/element/img).
+Generate the sizes attribute for HTML [img](https://devdocs.io/html/element/img) and [picture](https://devdocs.io/html/element/picture) tags.
 
 ## Install
 
@@ -13,9 +13,9 @@ npm install @renditions/get-sizes
 ## Usage
 
 ```js
-import getImgSizes from '@renditions/get-sizes'
+import getSizes from '@renditions/get-sizes'
 
-const sizes = getImgSizes({
+const sizes = getSizes({
   defaultImageWidth: '100vw',
   breakpoints: [
     {

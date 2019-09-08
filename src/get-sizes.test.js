@@ -1,6 +1,6 @@
-const getImgSizes = require('./get-sizes')
+const getSizes = require('./get-sizes')
 
-describe('get img sizes', () => {
+describe('get sizes attribute', () => {
   let args
 
   beforeEach(() => {
@@ -19,15 +19,15 @@ describe('get img sizes', () => {
   })
 
   it('should return a string', () => {
-    expect(typeof getImgSizes(args)).toBe('string')
+    expect(typeof getSizes(args)).toBe('string')
   })
 
   it('should return the correct string', () => {
-    expect(getImgSizes(args)).toBe('(min-width: 960px) 50vw,(min-width: 480px) 100vw,100vw')
+    expect(getSizes(args)).toBe('(min-width: 960px) 50vw,(min-width: 480px) 100vw,100vw')
   })
 
   it('should return the correct string without breakpoints', () => {
     delete args.breakpoints
-    expect(getImgSizes(args)).toBe('100vw')
+    expect(getSizes(args)).toBe('100vw')
   })
 })
