@@ -19,11 +19,11 @@ const sizes = getSizes({
   width: '100vw',
   breakpoints: [
     {
-      viewportMinWidth: '960px',
+      mediaMinWidth: '960px',
       width: '50vw'
     },
     {
-      viewportMinWidth: '480px'
+      mediaMinWidth: '480px'
     }
   ]
 })
@@ -37,7 +37,7 @@ The above code logs the following string to the console:
 (min-width: 960px) 50vw,(min-width: 480px) 100vw,100vw
 ```
 
-The breapoints argument is expected to be an array sorted by `viewportMinWidth` in descending order.
+The breapoints argument is expected to be an array sorted by `mediaMinWidth` in descending order.
 
 ### Using with React
 

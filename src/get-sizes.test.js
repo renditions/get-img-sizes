@@ -8,11 +8,11 @@ describe('get sizes attribute', () => {
       width: '100vw',
       breakpoints: [
         {
-          viewportMinWidth: '960px',
+          mediaMinWidth: '960px',
           width: '50vw'
         },
         {
-          viewportMinWidth: '480px'
+          mediaMinWidth: '480px'
         }
       ]
     }
