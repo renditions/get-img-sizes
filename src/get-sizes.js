@@ -6,7 +6,7 @@ const getSizes = ({ width, breakpoints = [] }) => {
 
 const sortByMediaMinWidth = breakpoints => {
   breakpoints.forEach(bp => {
-    if(bp.mediaMinWidth) {
+    if (bp.mediaMinWidth) {
       bp._mediaMinWidthInt = parseInt(bp.mediaMinWidth, 10)
     }
   })
@@ -18,9 +18,9 @@ const getSortedSizes = (config, sort = false) => {
     return getSizes(config)
   }
 
-  const configCopy = { ...config };
+  const configCopy = { ...config }
 
-  configCopy.breakpoints = configCopy.breakpoints || [];
+  configCopy.breakpoints = configCopy.breakpoints || []
 
   sortByMediaMinWidth(configCopy.breakpoints)
 
