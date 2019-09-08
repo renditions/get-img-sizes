@@ -5,11 +5,11 @@ describe('get sizes attribute', () => {
 
   beforeEach(() => {
     args = {
-      defaultImageWidth: '100vw',
+      width: '100vw',
       breakpoints: [
         {
           viewportMinWidth: '960px',
-          imageWidth: '50vw'
+          width: '50vw'
         },
         {
           viewportMinWidth: '480px'

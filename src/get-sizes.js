@@ -1,6 +1,6 @@
-const getSizes = ({ defaultImageWidth, breakpoints = [] }) => {
-  const sizes = breakpoints.map(bp => `(min-width: ${bp.viewportMinWidth}) ${bp.imageWidth || defaultImageWidth}`)
-  sizes.push(defaultImageWidth)
+const getSizes = ({ width, breakpoints = [] }) => {
+  const sizes = breakpoints.map(bp => `(min-width: ${bp.viewportMinWidth}) ${bp.width || width}`)
+  sizes.push(width)
   return sizes.join(',')
 }
 

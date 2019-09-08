@@ -16,11 +16,11 @@ npm install @renditions/get-sizes
 import getSizes from '@renditions/get-sizes'
 
 const sizes = getSizes({
-  defaultImageWidth: '100vw',
+  width: '100vw',
   breakpoints: [
     {
       viewportMinWidth: '960px',
-      imageWidth: '50vw'
+      width: '50vw'
     },
     {
       viewportMinWidth: '480px'
@@ -43,8 +43,8 @@ The above code logs the following string to the console:
 import React from 'react'
 import getSizes from '@renditions/get-sizes'
 
-const Image = ({ width, ...rest }) => {
-  const sizes = getSizes({ defaultImageWidth: width })
+const Image = ({ width = '100vw', ...rest }) => {
+  const sizes = getSizes({ width })
 
   return <img sizes={sizes} {...rest} />
 }
