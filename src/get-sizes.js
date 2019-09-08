@@ -4,4 +4,27 @@ const getSizes = ({ width, breakpoints = [] }) => {
   return sizes.join(',')
 }
 
-module.exports = getSizes
+const sortByMediaMinWidth = breakpoints => {
+  breakpoints.forEach(bp => {
+    if(bp.mediaMinWidth) {
+      bp._mediaMinWidthInt = parseInt(bp.mediaMinWidth, 10)
+    }
+  })
+  breakpoints.sort((a, b) => a._mediaMinWidthInt < b._mediaMinWidthInt)
+}
+
+const getSortedSizes = (config, sort = false) => {
+  if (!sort) {
+    return getSizes(config)
+  }
+
+  const configCopy = { ...config };
+
+  configCopy.breakpoints = configCopy.breakpoints || [];
+
+  sortByMediaMinWidth(configCopy.breakpoints)
+
+  return getSizes(configCopy)
+}
+
+module.exports = getSortedSizes

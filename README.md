@@ -28,16 +28,46 @@ const sizes = getSizes({
   ]
 })
 
-console.log(sizes)
+console.log({ sizes })
+// { sizes: '(min-width: 960px) 50vw,(min-width: 480px) 100vw,100vw' }
 ```
 
-The above code logs the following string to the console:
-
-```
-(min-width: 960px) 50vw,(min-width: 480px) 100vw,100vw
-```
+### Breakpoints
 
 The breapoints argument is expected to be an array sorted by `mediaMinWidth` in descending order.
+
+To sort the breakpoints automatically, pass `true` for the second argument:
+
+```js
+const sizesConfig = {
+  width: '100vw',
+  breakpoints: [
+    {
+      mediaMinWidth: '960px',
+      width: '50vw'
+    },
+    {
+      mediaMinWidth: '1440px',
+      width: '50vw'
+    },
+    {
+      mediaMinWidth: '480px'
+    }
+  ]
+}
+
+const sizes = getSizes(sizesConfig, true)
+
+console.log({ sizes })
+// { sizes: '(min-width: 1440px) 50vw,(min-width: 960px) 50vw,(min-width: 480px) 100vw,100vw' }
+```
+
+The breakpoints array can be also be omitted entirely:
+
+```js
+console.log({ sizes: getSizes({ width: '100vw' }, true) })
+// { sizes: '100vw' }
+```
 
 ### Using with React
 
