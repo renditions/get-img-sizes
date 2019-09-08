@@ -65,7 +65,7 @@ console.log({ sizes })
 The breakpoints array can be also be omitted entirely:
 
 ```js
-console.log({ sizes: getSizes({ width: '100vw' }, true) })
+console.log({ sizes: getSizes({ width: '100vw' }) })
 // { sizes: '100vw' }
 ```
 
