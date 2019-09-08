@@ -48,7 +48,7 @@ const sizesConfig = {
     },
     {
       mediaMinWidth: '1440px',
-      width: '50vw'
+      width: '33vw'
     },
     {
       mediaMinWidth: '480px'
@@ -59,7 +59,7 @@ const sizesConfig = {
 const sizes = getSizes(sizesConfig, true)
 
 console.log({ sizes })
-// { sizes: '(min-width: 1440px) 50vw,(min-width: 960px) 50vw,(min-width: 480px) 100vw,100vw' }
+// { sizes: '(min-width: 1440px) 33vw,(min-width: 960px) 50vw,(min-width: 480px) 100vw,100vw' }
 ```
 
 The breakpoints array can be also be omitted entirely:
