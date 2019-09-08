@@ -1,19 +1,19 @@
-# @renditions/get-img-sizes
+# @renditions/get-sizes
 
-[![npm version](https://img.shields.io/npm/v/@renditions/get-img-sizes.svg?style=flat-square)](https://www.npmjs.com/package/@renditions/get-img-sizes) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/feross/standard)
+[![npm version](https://img.shields.io/npm/v/@renditions/get-sizes.svg?style=flat-square)](https://www.npmjs.com/package/@renditions/get-sizes) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/feross/standard)
 
 Generate string for HTML image [sizes attribute](https://devdocs.io/html/element/img).
 
 ## Install
 
 ```sh
-npm install @renditions/get-img-sizes
+npm install @renditions/get-sizes
 ```
 
 ## Usage
 
 ```js
-import getImgSizes from '@renditions/get-img-sizes'
+import getImgSizes from '@renditions/get-sizes'
 
 const sizes = getImgSizes({
   defaultImageWidth: '100vw',
@@ -41,7 +41,7 @@ The above code logs the following string to the console:
 
 ```jsx
 import React from 'react'
-import getSizes from '@renditions/get-img-sizes'
+import getSizes from '@renditions/get-sizes'
 
 const Image = ({ width, ...rest }) => {
   const sizes = getSizes({ defaultImageWidth: width })

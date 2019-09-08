@@ -1,5 +1,5 @@
 {
-  "name": "@renditions/get-img-sizes",
+  "name": "@renditions/get-sizes",
   "version": "0.0.5",
   "description": "Generate string for HTML image sizes attribute.",
   "main": "src/index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/renditions/get-img-sizes.git"
+    "url": "git+https://github.com/renditions/get-sizes.git"
   },
   "author": "Stef <git@srilq.email>",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/renditions/get-img-sizes/issues"
+    "url": "https://github.com/renditions/get-sizes/issues"
   },
-  "homepage": "https://github.com/renditions/get-img-sizes#readme",
+  "homepage": "https://github.com/renditions/get-sizes#readme",
   "devDependencies": {
     "jest": "^24.9.0",
     "standard": "^14.1.0"

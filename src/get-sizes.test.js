@@ -1,4 +1,4 @@
-const getImgSizes = require('./get-img-sizes')
+const getImgSizes = require('./get-sizes')
 
 describe('get img sizes', () => {
   let args

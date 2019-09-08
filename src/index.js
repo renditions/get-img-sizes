@@ -1,3 +1,3 @@
-const getImgSizes = require('./get-img-sizes')
+const getImgSizes = require('./get-sizes')
 
 module.exports = getImgSizes
