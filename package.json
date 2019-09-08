@@ -11,12 +11,12 @@
     "type": "git",
     "url": "git+https://github.com/renditions/get-sizes.git"
   },
-  "author": "Stef <git@srilq.email>",
+  "author": "Stef <stef@srilq.email>",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/renditions/get-sizes/issues"
   },
-  "homepage": "https://github.com/renditions/get-sizes#readme",
+  "homepage": "https://renditions.dev",
   "devDependencies": {
     "jest": "^24.9.0",
     "standard": "^14.1.0"
