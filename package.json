@@ -1,7 +1,7 @@
 {
   "name": "@renditions/get-sizes",
   "version": "1.0.0",
-  "description": "Generate string for HTML image sizes attribute.",
+  "description": "Generate the sizes attribute for HTML img and picture tags",
   "main": "src/index.js",
   "scripts": {
     "test": "standard --global describe --global it --global expect --global beforeEach && jest",
@@ -22,11 +22,11 @@
     "standard": "^14.1.0"
   },
   "keywords": [
-    "responsive image",
-    "responsive images",
-    "images",
+    "sizes",
     "image",
     "picture",
-    "sizes"
+    "images",
+    "responsive images",
+    "responsive image"
   ]
 }
