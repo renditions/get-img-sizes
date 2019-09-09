@@ -42,7 +42,7 @@ describe('get sizes attribute', () => {
         {
           mediaMinWidth: '1440px',
           width: '33vw'
-        },
+        }
       ]
     }
   })
