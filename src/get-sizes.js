@@ -10,7 +10,7 @@ const sortByMediaMinWidth = breakpoints => {
       bp._mediaMinWidthInt = parseInt(bp.mediaMinWidth, 10)
     }
   })
-  breakpoints.sort((a, b) => a._mediaMinWidthInt < b._mediaMinWidthInt)
+  breakpoints.sort((a, b) => b._mediaMinWidthInt - a._mediaMinWidthInt)
 }
 
 const getSortedSizes = (config, sort = false) => {

@@ -10,11 +10,15 @@ describe('get sizes attribute', () => {
       breakpoints: [
         {
           mediaMinWidth: '1440px',
-          width: '50vw'
+          width: '33vw'
         },
         {
           mediaMinWidth: '960px',
           width: '50vw'
+        },
+        {
+          mediaMinWidth: '720px',
+          width: '100vw'
         },
         {
           mediaMinWidth: '480px'
@@ -25,16 +29,20 @@ describe('get sizes attribute', () => {
       width: '100vw',
       breakpoints: [
         {
+          mediaMinWidth: '480px'
+        },
+        {
           mediaMinWidth: '960px',
           width: '50vw'
+        },
+        {
+          mediaMinWidth: '720px',
+          width: '100vw'
         },
         {
           mediaMinWidth: '1440px',
           width: '33vw'
         },
-        {
-          mediaMinWidth: '480px'
-        }
       ]
     }
   })
@@ -44,7 +52,7 @@ describe('get sizes attribute', () => {
   })
 
   it('should return the correct string', () => {
-    expect(getSizes(args)).toBe('(min-width: 1440px) 50vw,(min-width: 960px) 50vw,(min-width: 480px) 100vw,100vw')
+    expect(getSizes(args)).toBe('(min-width: 1440px) 33vw,(min-width: 960px) 50vw,(min-width: 720px) 100vw,(min-width: 480px) 100vw,100vw')
   })
 
   it('should return the correct string without breakpoints', () => {
@@ -53,11 +61,11 @@ describe('get sizes attribute', () => {
   })
 
   it('should sort breakpoints by media min width if second param is true', () => {
-    expect(getSizes(argsUnsorted, true)).toBe('(min-width: 1440px) 33vw,(min-width: 960px) 50vw,(min-width: 480px) 100vw,100vw')
+    expect(getSizes(argsUnsorted, true)).toBe('(min-width: 1440px) 33vw,(min-width: 960px) 50vw,(min-width: 720px) 100vw,(min-width: 480px) 100vw,100vw')
   })
 
   it('should not sort breakpoints if second param is false', () => {
-    expect(getSizes(argsUnsorted, false)).toBe('(min-width: 960px) 50vw,(min-width: 1440px) 33vw,(min-width: 480px) 100vw,100vw')
+    expect(getSizes(argsUnsorted, false)).toBe('(min-width: 480px) 100vw,(min-width: 960px) 50vw,(min-width: 720px) 100vw,(min-width: 1440px) 33vw,100vw')
   })
 
   it('should return the correct string without breakpoints if second param is true', () => {
