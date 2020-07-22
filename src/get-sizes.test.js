@@ -6,19 +6,19 @@ describe('get sizes attribute', () => {
 
   beforeEach(() => {
     args = {
-      width: '100vw',
+      size: '100vw',
       breakpoints: [
         {
           mediaMinWidth: '1440px',
-          width: '33vw'
+          size: '33vw'
         },
         {
           mediaMinWidth: '960px',
-          width: '50vw'
+          size: '50vw'
         },
         {
           mediaMinWidth: '720px',
-          width: '100vw'
+          size: '100vw'
         },
         {
           mediaMinWidth: '480px'
@@ -26,22 +26,22 @@ describe('get sizes attribute', () => {
       ]
     }
     argsUnsorted = {
-      width: '100vw',
+      size: '100vw',
       breakpoints: [
         {
           mediaMinWidth: '480px'
         },
         {
           mediaMinWidth: '960px',
-          width: '50vw'
+          size: '50vw'
         },
         {
           mediaMinWidth: '720px',
-          width: '100vw'
+          size: '100vw'
         },
         {
           mediaMinWidth: '1440px',
-          width: '33vw'
+          size: '33vw'
         }
       ]
     }

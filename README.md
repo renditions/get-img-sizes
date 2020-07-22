@@ -16,11 +16,11 @@ npm install @renditions/get-sizes
 import getSizes from '@renditions/get-sizes'
 
 const sizes = getSizes({
-  width: '100vw',
+  size: '100vw',
   breakpoints: [
     {
       mediaMinWidth: '960px',
-      width: '50vw'
+      size: '50vw'
     },
     {
       mediaMinWidth: '480px'
@@ -40,15 +40,15 @@ To sort the breakpoints automatically, pass `true` for the second argument:
 
 ```js
 const sizesConfig = {
-  width: '100vw',
+  size: '100vw',
   breakpoints: [
     {
       mediaMinWidth: '960px',
-      width: '50vw'
+      size: '50vw'
     },
     {
       mediaMinWidth: '1440px',
-      width: '33vw'
+      size: '33vw'
     },
     {
       mediaMinWidth: '480px'
@@ -65,7 +65,7 @@ console.log({ sizes })
 The breakpoints array can be also be omitted entirely:
 
 ```js
-console.log({ sizes: getSizes({ width: '100vw' }) })
+console.log({ sizes: getSizes({ size: '100vw' }) })
 // { sizes: '100vw' }
 ```
 
@@ -75,8 +75,8 @@ console.log({ sizes: getSizes({ width: '100vw' }) })
 import React from 'react'
 import getSizes from '@renditions/get-sizes'
 
-const Image = ({ width = '100vw', ...rest }) => {
-  const sizes = getSizes({ width })
+const MyImage = ({ size = '100vw', ...rest }) => {
+  const sizes = getSizes({ size })
 
   return <img sizes={sizes} {...rest} />
 }

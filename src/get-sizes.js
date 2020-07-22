@@ -1,6 +1,6 @@
-const getSizes = ({ width, breakpoints = [] }) => {
-  const sizes = breakpoints.map(bp => `(min-width: ${bp.mediaMinWidth}) ${bp.width || width}`)
-  sizes.push(width)
+const getSizes = ({ size, breakpoints = [] }) => {
+  const sizes = breakpoints.map(bp => `(min-width: ${bp.mediaMinWidth}) ${bp.size || size}`)
+  sizes.push(size)
   return sizes.join(',')
 }
 
