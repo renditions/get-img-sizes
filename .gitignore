@@ -1,5 +1,5 @@
 /node_modules
 
+*.d.ts
 getSizes.dist.js
 getSizes.dist.min.js
-*.d.ts

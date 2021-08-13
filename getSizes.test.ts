@@ -1,8 +1,8 @@
-import getSizes from "./getSizes";
+import getSizes, { Breakpoint } from "./getSizes";
 
 describe("get sizes attribute", () => {
-  let args: Parameters<typeof getSizes>[0];
-  let argsUnsorted: Parameters<typeof getSizes>[0];
+  let args: { size: string; breakpoints?: Breakpoint[] };
+  let argsUnsorted: { size: string; breakpoints?: Breakpoint[] };
 
   beforeEach(() => {
     args = {

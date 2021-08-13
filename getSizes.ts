@@ -1,4 +1,4 @@
-type Breakpoint = {
+export type Breakpoint = {
   mediaMinWidth: string;
   size?: string;
 };

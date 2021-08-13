@@ -25,7 +25,7 @@
   "bugs": {
     "url": "https://github.com/renditions/get-sizes/issues"
   },
-  "homepage": "https://renditions.dev",
+  "homepage": "https://github.com/renditions/get-sizes#readme",
   "devDependencies": {
     "@types/jest": "26.0.24",
     "@typescript-eslint/eslint-plugin": "4.29.1",
