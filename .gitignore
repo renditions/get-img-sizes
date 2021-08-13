@@ -1,5 +1,5 @@
 /node_modules
-/coverage
-.DS_Store
-.env*
-npm-debug.log*
+
+getSizes.dist.js
+getSizes.dist.min.js
+*.d.ts
