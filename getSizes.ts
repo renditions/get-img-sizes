@@ -22,7 +22,7 @@ const getSizes = (
     breakpoints?: Breakpoint[];
   },
   sort = false
-) => {
+): string => {
   const sorted = sort ? sortByMediaMinWidth(breakpoints) : breakpoints;
   const sizes = sorted.map(
     (bp) => `(min-width: ${bp.mediaMinWidth}) ${bp.size || size}`
